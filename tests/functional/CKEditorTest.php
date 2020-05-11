@@ -136,7 +136,7 @@ class CKEditorTest extends TestCase
 
         $test = 'CKEDITOR.replace(\'post-message\', {"height":200,"toolbarGroups":[{"name":"undo"},{"name":"basicstyles","groups":["basicstyles","cleanup"]},{"name":"colors"},{"name":"links","groups":["links","insert"]},{"name":"others","groups":["others","about"]}],"removeButtons":"Subscript,Superscript,Flash,Table,HorizontalRule,Smiley,SpecialChar,PageBreak,Iframe","removePlugins":"elementspath","resize_enabled":false});'
             . "\n"
-            . 'dosamigos.ckEditorWidget.registerOnChangeHandler(\'post-message\');';
+            . 'factorenergia.ckEditorWidget.registerOnChangeHandler(\'post-message\');';
         $this->assertEquals($test, $view->js[View::POS_READY]['test-ckeditor-js']);
     }
 }

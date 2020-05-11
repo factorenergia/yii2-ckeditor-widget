@@ -3,7 +3,7 @@
 namespace tests;
 
 
-use dosamigos\ckeditor\CKEditorTrait;
+use factorenergia\ckeditor\CKEditorTrait;
 
 
 class CKEditorTraitTest extends TestCase

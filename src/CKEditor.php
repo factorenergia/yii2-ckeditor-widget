@@ -1,10 +1,6 @@
 <?php
-/**
- * @copyright Copyright (c) 2013-2019 2amigOS! Consulting Group LLC
- * @link http://2amigos.us
- * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
- */
-namespace dosamigos\ckeditor;
+
+namespace factorenergia\ckeditor;
 
 use yii\helpers\Html;
 use yii\helpers\Json;
@@ -12,11 +8,6 @@ use yii\widgets\InputWidget;
 
 /**
  * CKEditor renders a CKEditor js plugin for classic editing.
- * @see http://docs.ckeditor.com/
- * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @link http://www.ramirezcobos.com/
- * @link http://www.2amigos.us/
- * @package dosamigos\ckeditor
  */
 class CKEditor extends InputWidget
 {
@@ -63,10 +54,10 @@ class CKEditor extends InputWidget
             : '{}';
 
         $js[] = "CKEDITOR.replace('$id', $options);";
-        $js[] = "dosamigos.ckEditorWidget.registerOnChangeHandler('$id');";
+        $js[] = "factorenergia.ckEditorWidget.registerOnChangeHandler('$id');";
 
         if (isset($this->clientOptions['filebrowserUploadUrl']) || isset($this->clientOptions['filebrowserImageUploadUrl'])) {
-            $js[] = "dosamigos.ckEditorWidget.registerCsrfImageUploadHandler();";
+            $js[] = "factorenergia.ckEditorWidget.registerCsrfImageUploadHandler();";
         }
 
         $view->registerJs(implode("\n", $js));

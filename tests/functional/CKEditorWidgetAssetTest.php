@@ -18,6 +18,6 @@ class CKEditorWidgetAssetTest extends TestCase
         $content = $view->renderFile('@tests/data/views/rawlayout.php');
         $this->assertContains('jquery.js', $content);
         $this->assertContains('ckeditor.js', $content);
-        $this->assertContains('dosamigos-ckeditor.widget.js', $content);
+        $this->assertContains('factorenergia-ckeditor.widget.js', $content);
     }
 }

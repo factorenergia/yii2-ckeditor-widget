@@ -1,12 +1,12 @@
 CKEditor Widget for Yii2
 ========================
 
-[![Latest Version](https://img.shields.io/github/tag/2amigos/yii2-ckeditor-widget.svg?style=flat-square&label=release)](https://github.com/2amigos/yii2-ckeditor-widget/tags)
+[![Latest Version](https://img.shields.io/github/tag/factorenergia/yii2-ckeditor-widget.svg?style=flat-square&label=release)](https://github.com/factorenergia/yii2-ckeditor-widget/tags)
 [![Software License](https://img.shields.io/badge/license-BSD-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/2amigos/yii2-ckeditor-widget/master.svg?style=flat-square)](https://travis-ci.org/2amigos/yii2-ckeditor-widget)
-[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/2amigos/yii2-ckeditor-widget.svg?style=flat-square)](https://scrutinizer-ci.com/g/2amigos/yii2-ckeditor-widget/code-structure)
-[![Quality Score](https://img.shields.io/scrutinizer/g/2amigos/yii2-ckeditor-widget.svg?style=flat-square)](https://scrutinizer-ci.com/g/2amigos/yii2-ckeditor-widget)
-[![Total Downloads](https://img.shields.io/packagist/dt/2amigos/yii2-ckeditor-widget.svg?style=flat-square)](https://packagist.org/packages/2amigos/yii2-ckeditor-widget)
+[![Build Status](https://img.shields.io/travis/factorenergia/yii2-ckeditor-widget/master.svg?style=flat-square)](https://travis-ci.org/factorenergia/yii2-ckeditor-widget)
+[![Coverage Status](https://img.shields.io/scrutinizer/coverage/g/factorenergia/yii2-ckeditor-widget.svg?style=flat-square)](https://scrutinizer-ci.com/g/factorenergia/yii2-ckeditor-widget/code-structure)
+[![Quality Score](https://img.shields.io/scrutinizer/g/factorenergia/yii2-ckeditor-widget.svg?style=flat-square)](https://scrutinizer-ci.com/g/factorenergia/yii2-ckeditor-widget)
+[![Total Downloads](https://img.shields.io/packagist/dt/factorenergia/yii2-ckeditor-widget.svg?style=flat-square)](https://packagist.org/packages/factorenergia/yii2-ckeditor-widget)
 
 Renders a [CKEditor WYSIWYG text editor plugin](http://www.ckeditor.com) widget.
 
@@ -17,7 +17,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require 2amigos/yii2-ckeditor-widget
+composer require factorenergia/yii2-ckeditor-widget
 ```
 or add
 
@@ -44,7 +44,7 @@ Using a model with a basic preset:
 
 ```
 
-use dosamigos\ckeditor\CKEditor;
+use factorenergia\ckeditor\CKEditor;
 
 
 <?= $form->field($model, 'text')->widget(CKEditor::className(), [
@@ -56,7 +56,7 @@ Using inline edition with basic preset:
 
 ```
 
-use dosamigos\ckeditor\CKEditorInline;
+use factorenergia\ckeditor\CKEditorInline;
 
 <?php CKEditorInline::begin(['preset' => 'basic']);?>
     This text can be edited now :)
@@ -86,7 +86,7 @@ widget. No more talking, here is the code:
 ```php 
 <?php
  
-use dosamigos\ckeditor\CKEditorInline;
+use factorenergia\ckeditor\CKEditorInline;
 
 // First we need to tell CKEDITOR variable where is our external plugin
 $this->registerJs("CKEDITOR.plugins.addExternal('pbckcode', '/pbckcode/plugin.js', '');");
@@ -123,7 +123,7 @@ See this simple example code:
 
 ```php
 <?php
-use dosamigos\ckeditor\CKEditor;
+use factorenergia\ckeditor\CKEditor;
 
 echo $form->field($model, 'text')->widget(CKEditor::className(), [
     'kcfinder' => true,
@@ -138,7 +138,7 @@ For change upload directory or change some options you can see this advanced exa
 
 ```php
 <?php
-use dosamigos\ckeditor\CKEditor;
+use factorenergia\ckeditor\CKEditor;
 
 echo $form->field($model, 'text')->widget(CKEditor::className(), [
     'kcfinder' => true,
@@ -170,7 +170,7 @@ echo $form->field($model, 'text')->widget(CKEditor::className(), [
 
 About extra assets 
 ------------------
-You maybe wonder why there is file `dosamigos-ckeditor.widget.js`. The reason is that due to the way Yii2 works with 
+You maybe wonder why there is file `factorenergia-ckeditor.widget.js`. The reason is that due to the way Yii2 works with 
 forms and Cross-Site Request Forgery (csrf). CKEditor does not trigger the on change event nor collects the CSRF token 
 when using file uploads. 
 

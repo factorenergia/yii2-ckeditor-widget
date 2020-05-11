@@ -2,11 +2,7 @@
 
 /**
  *
- * basic preset returns the basic toolbar configuration set for CKEditor.
- *
- * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @link http://www.ramirezcobos.com/
- * @link http://www.2amigos.us/
+ * Basic preset returns the basic toolbar configuration set for CKEditor.
  */
 return [
     'height' => 200,

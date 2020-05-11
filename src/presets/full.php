@@ -1,11 +1,7 @@
 <?php
 /**
  *
- * full preset returns the full toolbar configuration set for CKEditor.
- *
- * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @link http://www.ramirezcobos.com/
- * @link http://www.2amigos.us/
+ * Full preset returns the full toolbar configuration set for CKEditor.
  */
 return [
     'height' => 400,

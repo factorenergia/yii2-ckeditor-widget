@@ -3,7 +3,7 @@
 namespace tests\data\overrides;
 
 
-use dosamigos\ckeditor\CKEditorWidgetAsset;
+use factorenergia\ckeditor\CKEditorWidgetAsset;
 
 class TestCKEditorWidgetAsset extends CKEditorWidgetAsset
 {

@@ -1,19 +1,9 @@
 <?php
-/**
- *
- * TestCKEditor.php
- *
- * Date: 02/03/15
- * Time: 12:25
- * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @link http://www.ramirezcobos.com/
- * @link http://www.2amigos.us/
- */
 
 namespace tests\data\overrides;
 
 
-use dosamigos\ckeditor\CKEditor;
+use factorenergia\ckeditor\CKEditor;
 use yii\web\View;
 use yii\helpers\Json;
 
@@ -35,10 +25,10 @@ class TestCKEditor extends CKEditor
             : '{}';
 
         $js[] = "CKEDITOR.replace('$id', $options);";
-        $js[] = "dosamigos.ckEditorWidget.registerOnChangeHandler('$id');";
+        $js[] = "factorenergia.ckEditorWidget.registerOnChangeHandler('$id');";
 
         if (isset($this->clientOptions['filebrowserUploadUrl'])) {
-            $js[] = "dosamigos.ckEditorWidget.registerCsrfImageUploadHandler();";
+            $js[] = "factorenergia.ckEditorWidget.registerCsrfImageUploadHandler();";
         }
 
         $view->registerJs(implode("\n", $js), View::POS_READY, 'test-ckeditor-js');
