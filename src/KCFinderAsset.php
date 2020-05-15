@@ -10,5 +10,5 @@ use yii\web\AssetBundle;
 
 class KCFinderAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/sunhater/kcfinder';
+    public $sourcePath = '@vendor/factorenergia/kcfinder';
 }
